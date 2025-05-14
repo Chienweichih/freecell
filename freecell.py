@@ -338,10 +338,20 @@ curses.noecho()
 curses.curs_set(0)
 window.keypad(True)
 curses.start_color()
-curses.init_pair(1, curses.COLOR_CYAN, curses.COLOR_BLACK)
-curses.init_pair(2, curses.COLOR_WHITE, curses.COLOR_BLUE)
-curses.init_pair(3, curses.COLOR_CYAN, curses.COLOR_BLUE)
-curses.init_pair(4, curses.COLOR_YELLOW, curses.COLOR_BLACK)
+curses.init_color(curses.COLOR_BLACK, 0, 0, 0);
+curses.init_color(curses.COLOR_BLUE, 0, 0, 666);
+curses.init_color(curses.COLOR_CYAN, 0, 666, 666);
+curses.init_color(curses.COLOR_GREEN, 0, 666, 0);
+curses.init_color(curses.COLOR_MAGENTA, 666, 0, 666);
+curses.init_color(curses.COLOR_RED, 666, 0, 0);
+curses.init_color(curses.COLOR_WHITE, 1000, 1000, 1000);
+curses.init_color(curses.COLOR_YELLOW, 666, 333, 0);
+curses.init_pair(1, curses.COLOR_RED, curses.COLOR_WHITE)
+curses.init_pair(2, curses.COLOR_WHITE, curses.COLOR_BLACK)
+curses.init_pair(3, curses.COLOR_WHITE, curses.COLOR_RED)
+curses.init_pair(4, curses.COLOR_GREEN, curses.COLOR_WHITE)
+curses.init_pair(5, curses.COLOR_BLACK, curses.COLOR_WHITE)
+window.bkgd(curses.color_pair(5));
 columns = dealgame(seed)
 running = True
 while running:

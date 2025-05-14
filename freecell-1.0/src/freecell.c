@@ -412,10 +412,20 @@ int main(int argc, char **argv) {
 	curs_set(0);
 	start_color();
 	keypad(stdscr, TRUE);
-	init_pair(1, COLOR_CYAN, COLOR_BLACK);
-	init_pair(2, COLOR_WHITE, COLOR_BLUE);
-	init_pair(3, COLOR_CYAN, COLOR_BLUE);
-	init_pair(4, COLOR_YELLOW, COLOR_BLACK);
+	init_color(COLOR_BLACK, 0, 0, 0);
+	init_color(COLOR_BLUE, 0, 0, 666);
+	init_color(COLOR_CYAN, 0, 666, 666);
+	init_color(COLOR_GREEN, 0, 666, 0);
+	init_color(COLOR_MAGENTA, 666, 0, 666);
+	init_color(COLOR_RED, 666, 0, 0);
+	init_color(COLOR_WHITE, 1000, 1000, 1000);
+	init_color(COLOR_YELLOW, 666, 333, 0);
+	init_pair(1, COLOR_RED, COLOR_WHITE);
+	init_pair(2, COLOR_WHITE, COLOR_BLACK);
+	init_pair(3, COLOR_WHITE, COLOR_RED);
+	init_pair(4, COLOR_GREEN, COLOR_WHITE);
+	init_pair(5, COLOR_BLACK, COLOR_WHITE);
+	bkgd(COLOR_PAIR(5));
 	while(running) {
 		int c;
 
