@@ -363,6 +363,8 @@ while running:
 			break
 	if gameover():
 		gameover_animation()
+		while ord('q') != window.getch():
+			pass # stay here
 		break
 
 	c = window.getch()

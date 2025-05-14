@@ -460,6 +460,10 @@ int main(int argc, char **argv) {
 			mvaddstr(3, 17, str);
 			move(5, 43);
 			refresh();
+			while ('q' != getch())
+			{
+				// stay here
+			}
 			break;
 		}
 
